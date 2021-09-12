@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Yunjie (Roya) He"
-  avatar           : "/files/imgs/profile.JPG"
+  avatar           : "profile.JPG"
   bio              : "A postgraduate of Computational Statistics and Machine Learning (CSML) programme, at UCL."
   location         : "London, UK"
   links:
