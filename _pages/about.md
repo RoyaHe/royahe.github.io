@@ -16,4 +16,7 @@ I'm a postgraduate student studying Computational Statistics and Machine Learnin
 <!-- ## News -->
 
 
-# Projects
+# Experiences
+- Research Intern at HUAWEI Noah's Ark Lab (June,2021 - Present)
+- Data Analyst Intern at HUATAI Technology (June, 2020 - Aug, 2020)
+- Research Assistant at Alan Turing Institute (June, 2019 - Sep, 2019)
