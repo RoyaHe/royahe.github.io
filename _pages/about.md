@@ -16,4 +16,4 @@ I'm a postgraduate student studying Computational Statistics and Machine Learnin
 <!-- ## News -->
 
 
-# Publications
+# Projects
