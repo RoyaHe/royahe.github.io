@@ -17,7 +17,7 @@ I'm a postgraduate student studying Computational Statistics and Machine Learnin
 # Projects
 - Improving Hierarchical Graph Neural Networks for Multi-hop Question Answering Via Hierarchical Graph Attention Mechanism and Graph Completion
 - Discovering the Effectiveness of Pre-trained Masked Language Modelsfor English Spell Correction [PDF](files/Discovering_the_Effectiveness_of_Pre_trained_Masked_Language_Modelsfor_English_Sentence_Correction (5).pdf)
-- **Distr6** is a unified and clean interface to organise the probability distributions implemented in R into one R6 object oriented package, as well as adding distributions yet to implemented in R, currently we have 42 probability distributions as well as 11 kernels.
+- **Distr6**: a unified and clean interface to organise the probability distributions implemented in R into one R6 object oriented package, as well as adding distributions yet to implemented in R, currently we have 42 probability distributions as well as 11 kernels.
 
 # Experiences
 - Research Intern at HUAWEI Noah's Ark Lab (June,2021 - Present)
