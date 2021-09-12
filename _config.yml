@@ -84,6 +84,10 @@ author:
   avatar           : "profile.png"
   bio              : "I am a postgraduate student of the Computational Statistics and Machine Learning (CSML) programme, at UCL."
   location         : "London, UK"
+  links:
+  - label: "CV"
+    icon: "fas fa-alien"
+    url: "http://RoyaHe.github.io/files/Roya-CV-12_09_2021.pdf"
   employer         :
   pubmed           : 
   googlescholar    : 
