@@ -14,6 +14,9 @@ I'm a postgraduate student studying Computational Statistics and Machine Learnin
 
 
 <!-- ## News -->
+# Projects
+## Development of R6-based R Package Distr6 
+### 
 
 
 # Experiences
