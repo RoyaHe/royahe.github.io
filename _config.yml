@@ -85,10 +85,10 @@ author:
   bio              : "I am a postgraduate student of the Computational Statistics and Machine Learning (CSML) programme, at UCL."
   location         : "London, UK"
   employer         :
- # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
- # googlescholar    : "http://yourfullgooglescholarurl.com"
+  pubmed           : 
+  googlescholar    : 
   email            : "yunjie.he.17@ucl.ac.uk"
- # researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  researchgate     :  
   uri              :
   bitbucket        :
   codepen          :
@@ -96,7 +96,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "https://github.com/RoyaHe"
+  github           : "RoyaHe"
   google_plus      :
   keybase          :
   instagram        :
