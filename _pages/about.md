@@ -15,7 +15,7 @@ I'm a postgraduate student at [University College London (UCL)](https://www.ucl.
 
 <!-- ## News -->
 # Projects
-- Improving Hierarchical Graph Neural Networks for Multi-hop Question Answering Via Hierarchical Graph Attention Mechanism and Graph Completion (Code and PDF will be released soon...)
+- Graph Attention with Hierarchies for Multi-hop Question Answering (Code and PDF will be released soon...)
 - Discovering the Effectiveness of Pre-trained Masked Language Modelsfor English Spell Correction [PDF](files/Discovering_the_Effectiveness_of_Pre_trained_Masked_Language_Modelsfor_English_Sentence_Correction (5).pdf) [Code](https://github.com/RoyaHe/royahe.github.io/tree/master/files/CLMBER)
 - **[Distr6](https://github.com/alan-turing-institute/distr6)**: a unified and clean interface to organise the probability distributions implemented in R into one R6 object oriented package, as well as adding distributions yet to implemented in R, currently we have 42 probability distributions as well as 11 kernels.
 
