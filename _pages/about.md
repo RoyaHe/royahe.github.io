@@ -14,9 +14,11 @@ I'm a postgraduate student at [University College London (UCL)](https://www.ucl.
 
 
 <!-- ## News -->
-# Projects
-- Graph Attention with Hierarchies for Multi-hop Question Answering (Code and PDF will be released soon...)
+# Publications
+- Graph Attention with Hierarchies for Multi-hop Question Answering (Under Review)
+
 - Discovering the Effectiveness of Pre-trained Masked Language Modelsfor English Spell Correction [PDF](files/Discovering_the_Effectiveness_of_Pre_trained_Masked_Language_Modelsfor_English_Sentence_Correction (5).pdf) [Code](https://github.com/RoyaHe/royahe.github.io/tree/master/files/CLMBER)
+
 - **[Distr6](https://cran.r-project.org/web/packages/distr6/index.html)**: a unified and clean interface to organise the probability distributions implemented in R into one R6 object oriented package, as well as adding distributions yet to implemented in R, currently we have 42 probability distributions as well as 11 kernels.
 
 # Experiences
