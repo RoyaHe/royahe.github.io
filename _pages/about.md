@@ -16,6 +16,7 @@ I'm a postgraduate student at [University College London (UCL)](https://www.ucl.
 <!-- ## News -->
 # Publications
 - Graph Attention with Hierarchies for Multi-hop Question Answering (Under Review)
+
 Multi-hop QA (Question Answering) is the task of finding the answer to a question across multiple documents. In recent years, a number of Deep Learning-based approaches have been proposed to tackle this complex task, as well as a few standard benchmarks to assess models' Multi-hop QA capabilities.
 In this paper, we focus on the well-established HotpotQA benchmark dataset, which requires models to perform answer span extraction as well as support sentence prediction. We present two extensions to the state-of-the-art Graph Neural Network (GNN) based model for HotpotQA, Hierarchical Graph Network (HGN): (i) we complete the original hierarchical structure by introducing new edges between the query and context sentence nodes; (ii) in the graph propagation step, we propose a novel extension to Hierarchical Graph Attention Network -- GATH (Graph ATtention with Hierarchies) -- that makes use of the graph hierarchy to update the node representations in a sequential fashion. Experiments on HotpotQA demonstrate the efficiency of the proposed modifications and support our assumptions about the effects of model-related variables.
 
