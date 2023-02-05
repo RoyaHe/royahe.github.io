@@ -21,8 +21,7 @@ I'm first year PhD student at [Analytical Computing (AC)](https://www.ipvs.uni-s
 
 <!-- ## News -->
 # Publications
-- [Graph Attention with Hierarchies for Multi-hop Question Answering](https://arxiv.org/abs/2301.11792)
-- **[Distr6](https://cran.r-project.org/web/packages/distr6/index.html)**: a unified and clean interface to organise the probability distributions implemented in R into one R6 object oriented package, as well as adding distributions yet to implemented in R, currently we have 42 probability distributions as well as 11 kernels.
+- Master thesis: [Graph Attention with Hierarchies for Multi-hop Question Answering](https://arxiv.org/abs/2301.11792)
 
 # Experiences
 - Ph.D. candidate at University Of Stuttgart and Bosch Center for Artificial Intelligence (Jun 2022 - present)
