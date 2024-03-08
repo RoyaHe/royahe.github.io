@@ -9,7 +9,7 @@ redirect_from:
 ---
 
 # About me
-I'm first year PhD student at [Analytical Computing (AC)](https://www.ipvs.uni-stuttgart.de/departments/ac/) department of University of Stuttgart and [Bosch Center for Artificial Intelligence (BCAI)](https://www.bosch-ai.com), co-supervised by [Prof. Dr. Steffen Staab](https://scholar.google.com/citations?user=QvpcUn8AAAAJ&hl=en) and [Prof. Dr. Evgeny Kharlamov](https://scholar.google.com/citations?user=-slpMF8AAAAJ&hl=en). Meanwhile, I'm also [IMPRS-IS](https://imprs.is.mpg.de) (International Max Planck Research School for Intelligent Systems) scholar. I obtained my master degree of Computational Statistics and Machine Learning(CSML) and bachelor degree of Economics and Statistics at University College London with the outstanding academic performance award. My current research interest includes but not limited to 
+I'm PhD student at [Analytical Computing (AC)](https://www.ipvs.uni-stuttgart.de/departments/ac/) department of University of Stuttgart and [Bosch Center for Artificial Intelligence (BCAI)](https://www.bosch-ai.com), under the supervision of [Prof. Dr. Steffen Staab](https://scholar.google.com/citations?user=QvpcUn8AAAAJ&hl=en). Meanwhile, I'm also [IMPRS-IS](https://imprs.is.mpg.de) (International Max Planck Research School for Intelligent Systems) scholar. I obtained my master degree of Computational Statistics and Machine Learning(CSML) and bachelor degree of Economics and Statistics at University College London with the outstanding academic performance award. My current research interest includes but not limited to 
 - Neural-symbolic methods for knowledge representation and reasoning
 - Knowledge Graph for Multi-modal tasks
 - Explanability and Uncertainty in Complex Question Answering
