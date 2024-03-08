@@ -1,7 +1,7 @@
 # main links links
 main:
- - title: "Publications"
-   url: /publications/
+ #  title: "Publications"
+ #  url: /publications/
 
  # -  title: "Talks"
  #   url: /talks/    
@@ -16,7 +16,7 @@ main:
     #url: /year-archive/
     
   - title: "CV"
-    url: "https://royahe.github.io/files/Yunjie He （Roya）.pdf"
+    url: "https://royahe.github.io/files/He_Yunjie.pdf"
     
  # - title: "Guide"
  #   url: /markdown/
