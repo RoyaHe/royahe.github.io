@@ -11,12 +11,12 @@ redirect_from:
 # About me
 I'm a PhD student at [Analytical Computing (AC)](https://www.ipvs.uni-stuttgart.de/departments/ac/) department of University of Stuttgart and [Bosch Center for Artificial Intelligence (BCAI)](https://www.bosch-ai.com), under the supervision of [Prof. Dr. Steffen Staab](https://scholar.google.com/citations?user=QvpcUn8AAAAJ&hl=en) and Prof. Dr. Evgeny Kharlamov. Meanwhile, I'm also an [IMPRS-IS](https://imprs.is.mpg.de) (International Max Planck Research School for Intelligent Systems) scholar. I obtained my master's degree in Computational Statistics and Machine Learning(CSML) and bachelor's degree in Economics and Statistics at University College London with an outstanding academic performance award. My current research interest includes but is not limited to 
 - Graph database and complex query answering
-- Neural-symbolic methods for knowledge representation and reasoning
+- Knowledge representation and reasoning
 - Multi-modal knowledge graphs 
 - Graph Neural Networks 
 
 # News
-- 2024.07 Our paper Generating SROI^- Ontologies via Knowledge Graph Query Embedding Learnig has been accepted by ECAI 2024! 
+- 2024.07 Our paper [Generating SROI^- Ontologies via Knowledge Graph Query Embedding Learnig](https://arxiv.org/abs/2407.09212) has been accepted by ECAI 2024! 
 - 2023.12 Our paper [Robust Knowledge Extraction from Large Language Models using Social Choice Theory](https://arxiv.org/abs/2312.14877) has been accepted by AAMAS 2024!
 - 2023.11 Attended ISWC2023 conference at Athens, Greece
 - 2023.08 Our paper [Can Pattern Learning Enhance Complex Logical Query Answering?](https://ceur-ws.org/Vol-3632/ISWC2023_paper_463.pdf) has been accepted by ISWC 2023 Poster&Demo track 
