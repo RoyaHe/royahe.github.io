@@ -26,7 +26,7 @@ I'm a PhD student at [Analytical Computing (AC)](https://www.ipvs.uni-stuttgart.
 <!-- ## News -->
 # Selected Publications
 - [Robust Knowledge Extraction from Large Language Models using Social Choice Theory](https://arxiv.org/abs/2312.14877)
-- [Generating SROI^- Ontologies via Knowledge Graph Query Embedding Learnig](https://arxiv.org/abs/2407.09212) 
+- [Generating $SROI^-$ Ontologies via Knowledge Graph Query Embedding Learnig](https://arxiv.org/abs/2407.09212) 
 - [Geometric Relational Embeddings: A Survey](https://arxiv.org/abs/2304.11949)
 - [Graph Attention with Hierarchies for Multi-hop Question Answering](https://arxiv.org/abs/2301.11792) (master thesis work with HUAWEI Noah's Ark NLP Lab)
 
