@@ -16,8 +16,9 @@ I'm a PhD student at [Analytical Computing (AC)](https://www.ipvs.uni-stuttgart.
 - Graph Neural Networks 
 
 # News
-- 2024.07 Our paper [Generating SROI^- Ontologies via Knowledge Graph Query Embedding Learnig](https://arxiv.org/abs/2407.09212) has been accepted by ECAI 2024! 
-- 2023.12 Our paper [Robust Knowledge Extraction from Large Language Models using Social Choice Theory](https://arxiv.org/abs/2312.14877) has been accepted by AAMAS 2024!
+- 2024.09 Our paper [Predictive Multiplicity of Knowledge Graph Embeddings in Link Prediction](https://arxiv.org/abs/2408.08226) has been accepted by EMNLP findings!
+- 2024.07 Our paper [Generating SROI^- Ontologies via Knowledge Graph Query Embedding Learnig](https://arxiv.org/abs/2407.09212) has been accepted by ECAI (Oral)! 
+- 2023.12 Our paper [Robust Knowledge Extraction from Large Language Models using Social Choice Theory](https://arxiv.org/abs/2312.14877) has been accepted by AAMAS!
 - 2023.11 Attended ISWC2023 conference at Athens, Greece
 - 2023.08 Our paper [Can Pattern Learning Enhance Complex Logical Query Answering?](https://ceur-ws.org/Vol-3632/ISWC2023_paper_463.pdf) has been accepted by ISWC 2023 Poster&Demo track 
 - 2023.07 Oxford Machine Learning Summer School
