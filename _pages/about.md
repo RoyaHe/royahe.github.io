@@ -16,7 +16,9 @@ I'm a PhD student at [Analytical Computing (AC)](https://www.ipvs.uni-stuttgart.
 - Graph Neural Networks 
 
 # News
-- 2025.01 Our paper [DAGE: DAG Query Answering via Relational Combinator with Logical Constraints](https://arxiv.org/abs/2410.22105) has been accepted by The Web Conference 2025!
+- 2025.01 Two papers got accepted:
+  - [DAGE: DAG Query Answering via Relational Combinator with Logical Constraints](https://arxiv.org/abs/2410.22105) is accepted by The Web Conference 2025 research track,
+  - [Conformalized answer set prediction for knowledge graph embedding](https://arxiv.org/abs/2408.08248) is accepted by NAACL25 main track.
 - 2024.10 Presented our work at ECAI 2024, Santiago De Compostela
 - 2024.09 Our paper [Predictive Multiplicity of Knowledge Graph Embeddings in Link Prediction](https://arxiv.org/abs/2408.08226) has been accepted by EMNLP 2024 findings!
 - 2024.07 Our paper [Generating $$SROI^-$$ Ontologies via Knowledge Graph Query Embedding Learnig](https://arxiv.org/abs/2407.09212) has been accepted by ECAI 2024 (Oral Talk)! 
