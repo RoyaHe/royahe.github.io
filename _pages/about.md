@@ -16,9 +16,10 @@ I'm a PhD student at [Analytical Computing (AC)](https://www.ipvs.uni-stuttgart.
 - Graph Neural Networks 
 
 # News
+- 2025.01 Our paper [DAGE: DAG Query Answering via Relational Combinator with Logical Constraints](https://arxiv.org/abs/2410.22105) has been accepted by The Web Conference 2025!
 - 2024.10 Presented our work at ECAI 2024, Santiago De Compostela
-- 2024.09 Our paper [Predictive Multiplicity of Knowledge Graph Embeddings in Link Prediction](https://arxiv.org/abs/2408.08226) has been accepted by EMNLP findings!
-- 2024.07 Our paper [Generating $$SROI^-$$ Ontologies via Knowledge Graph Query Embedding Learnig](https://arxiv.org/abs/2407.09212) has been accepted by ECAI (Oral Talk)! 
+- 2024.09 Our paper [Predictive Multiplicity of Knowledge Graph Embeddings in Link Prediction](https://arxiv.org/abs/2408.08226) has been accepted by EMNLP 2024 findings!
+- 2024.07 Our paper [Generating $$SROI^-$$ Ontologies via Knowledge Graph Query Embedding Learnig](https://arxiv.org/abs/2407.09212) has been accepted by ECAI 2024 (Oral Talk)! 
 - 2023.12 Our paper [Robust Knowledge Extraction from Large Language Models using Social Choice Theory](https://arxiv.org/abs/2312.14877) has been accepted by AAMAS!
 - 2023.11 Attended ISWC2023 conference in Athens, Greece
 - 2023.08 Our paper [Can Pattern Learning Enhance Complex Logical Query Answering?](https://ceur-ws.org/Vol-3632/ISWC2023_paper_463.pdf) has been accepted by ISWC 2023 Poster&Demo track 
@@ -26,11 +27,11 @@ I'm a PhD student at [Analytical Computing (AC)](https://www.ipvs.uni-stuttgart.
   
 <!-- ## News -->
 # Selected Publications
+- [DAGE: DAG Query Answering via Relational Combinator with Logical Constraints](https://arxiv.org/abs/2410.22105)
 - [Robust Knowledge Extraction from Large Language Models using Social Choice Theory](https://arxiv.org/abs/2312.14877)
 - [Generating $SROI^-$ Ontologies via Knowledge Graph Query Embedding Learnig](https://arxiv.org/abs/2407.09212) 
 - [Geometric Relational Embeddings: A Survey](https://arxiv.org/abs/2304.11949)
-- [Graph Attention with Hierarchies for Multi-hop Question Answering](https://arxiv.org/abs/2301.11792) (master thesis work with HUAWEI Noah's Ark NLP Lab)
-
+  
 # Experiences
 - Ph.D. candidate at the University Of Stuttgart and Bosch Center for Artificial Intelligence (Jun 2022 - present)
 - Research Assistant at City University Of Hong Kong (Nov 2021 - Apr 2022)
