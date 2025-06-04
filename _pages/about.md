@@ -42,6 +42,7 @@ I'm a PhD student at [Analytical Computing (AC)](https://www.ipvs.uni-stuttgart.
 - Research Assistant at Alan Turing Institute (Jun, 2019 - Sep, 2019)
 
 # Teaching & Community Services
+- Reviewing for ISWC conference 2025
 - Reviewing for WWW conference 2025
 - Reviewing for COLING 2025
 - Teaching Deep Learning Lab 2022/23 at the University of Stuttgart
