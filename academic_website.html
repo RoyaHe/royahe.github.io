@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yunjie (Roya) He — Researcher</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1a2e;
+  --paper: #faf8f5;
+  --accent: #7c4d28;
+  --accent-light: #c9956b;
+  --accent-glow: rgba(124,77,40,0.08);
+  --muted: #6b6b7b;
+  --border: #e0ddd8;
+  --card-bg: #ffffff;
+  --tag-bg: #f0ebe4;
+  --tag-ongoing: #e8f0e4;
+  --tag-ongoing-text: #3a6b2e;
+  --highlight: #fff8f0;
+  --code-bg: #f5f2ed;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.7;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ---- Nav ---- */
+nav {
+  position: fixed; top: 0; width: 100%; z-index: 100;
+  background: rgba(250,248,245,0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow 0.3s;
+}
+nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.06); }
+.nav-inner {
+  max-width: 1120px; margin: 0 auto; padding: 0 40px;
+  display: flex; justify-content: space-between; align-items: center; height: 58px;
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; font-size: 1.25rem;
+  letter-spacing: -0.02em; color: var(--ink); text-decoration: none;
+}
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 26px; list-style: none; }
+.nav-links a {
+  text-decoration: none; color: var(--muted);
+  font-size: 0.78rem; font-weight: 500;
+  letter-spacing: 0.07em; text-transform: uppercase;
+  transition: color 0.3s; position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -3px; left: 0;
+  width: 0; height: 1.5px; background: var(--accent); transition: width 0.3s;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-links a:hover::after { width: 100%; }
+
+.mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+.mobile-toggle span { display: block; width: 18px; height: 2px; background: var(--ink); margin: 4px 0; transition: 0.3s; }
+
+/* ---- Hero ---- */
+.hero {
+  padding: 130px 40px 70px;
+  max-width: 1120px; margin: 0 auto;
+  display: grid; grid-template-columns: 260px 1fr; gap: 56px; align-items: start;
+}
+.hero-photo-wrap { position: relative; }
+.hero-photo-wrap::before {
+  content: ''; position: absolute; top: 10px; left: 10px;
+  width: 100%; height: 100%;
+  border: 2px solid var(--accent-light); border-radius: 8px; z-index: 0;
+}
+.hero-photo {
+  width: 100%; aspect-ratio: 3/4; object-fit: cover;
+  border-radius: 8px; position: relative; z-index: 1;
+  filter: grayscale(12%) contrast(1.04); transition: filter 0.5s;
+}
+.hero-photo:hover { filter: grayscale(0%); }
+.hero-content { padding-top: 6px; }
+.hero-label {
+  font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 10px;
+}
+.hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem; font-weight: 700;
+  line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 14px;
+}
+.hero-subtitle {
+  font-size: 1rem; color: var(--muted); margin-bottom: 20px; max-width: 500px;
+}
+.hero-bio {
+  font-size: 0.92rem; line-height: 1.85; color: #3a3a4a;
+  max-width: 540px; margin-bottom: 24px;
+}
+.hero-bio a {
+  color: var(--accent); text-decoration: none;
+  border-bottom: 1px solid var(--accent-light); transition: border-color 0.3s;
+}
+.hero-bio a:hover { border-color: var(--accent); }
+.hero-links { display: flex; gap: 10px; flex-wrap: wrap; }
+.hero-link {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 7px 14px; border: 1px solid var(--border); border-radius: 6px;
+  text-decoration: none; color: var(--ink); font-size: 0.78rem; font-weight: 500;
+  transition: all 0.3s; background: var(--card-bg);
+}
+.hero-link:hover {
+  border-color: var(--accent); color: var(--accent);
+  transform: translateY(-1px); box-shadow: 0 3px 12px rgba(124,77,40,0.08);
+}
+.hero-link svg { width: 13px; height: 13px; }
+
+/* ---- Section ---- */
+section { max-width: 1120px; margin: 0 auto; padding: 65px 40px; }
+.section-header {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 36px;
+}
+.section-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.85rem; font-weight: 600; color: var(--accent);
+  width: 26px; height: 26px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1.5px solid var(--accent); border-radius: 50%; flex-shrink: 0;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem; font-weight: 700; letter-spacing: -0.02em;
+}
+.section-line { flex: 1; height: 1px; background: var(--border); }
+
+/* ---- Research Interests ---- */
+.interests-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.interest-card {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
+  padding: 22px 18px; text-align: center; transition: all 0.3s;
+}
+.interest-card:hover {
+  transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  border-color: var(--accent-light);
+}
+.interest-icon { font-size: 1.6rem; margin-bottom: 8px; display: block; }
+.interest-card h4 { font-size: 0.82rem; font-weight: 600; line-height: 1.4; }
+
+/* ---- News ---- */
+.news-list { display: flex; flex-direction: column; }
+.news-item {
+  display: grid; grid-template-columns: 96px 1fr; gap: 18px;
+  padding: 16px 0; border-bottom: 1px solid var(--border);
+}
+.news-item:first-child { border-top: 1px solid var(--border); }
+.news-date {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.92rem; font-weight: 600; color: var(--accent); padding-top: 2px;
+}
+.news-text { font-size: 0.88rem; line-height: 1.7; color: #3a3a4a; }
+.news-text a {
+  color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent-light);
+}
+.news-text a:hover { border-bottom-style: solid; }
+
+/* ---- Projects ---- */
+.projects-list { display: flex; flex-direction: column; gap: 22px; }
+.project-card {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
+  padding: 0; overflow: hidden; transition: all 0.35s; position: relative;
+}
+.project-card::before {
+  content: ''; position: absolute; left: 0; top: 0;
+  width: 4px; height: 100%;
+  background: linear-gradient(to bottom, var(--accent), var(--accent-light));
+  transform: scaleY(0); transition: transform 0.4s; transform-origin: top;
+}
+.project-card:hover::before { transform: scaleY(1); }
+.project-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.06); transform: translateX(3px);
+}
+.project-inner { padding: 26px 28px; }
+.project-top { display: flex; align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+.project-venue {
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent);
+  background: var(--tag-bg); padding: 3px 10px; border-radius: 4px;
+}
+.project-status {
+  font-size: 0.65rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; padding: 3px 10px; border-radius: 4px;
+}
+.project-status.published { background: var(--tag-bg); color: var(--accent); }
+.project-status.ongoing { background: var(--tag-ongoing); color: var(--tag-ongoing-text); }
+.project-status.oral { background: #fff0e0; color: #b8860b; }
+.project-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; font-weight: 700; line-height: 1.35; margin-bottom: 8px;
+}
+.project-title a { color: var(--ink); text-decoration: none; transition: color 0.3s; }
+.project-title a:hover { color: var(--accent); }
+.project-authors {
+  font-size: 0.8rem; color: var(--muted); line-height: 1.5; margin-bottom: 12px;
+}
+.project-authors strong { color: var(--ink); font-weight: 600; }
+.project-desc {
+  font-size: 0.85rem; line-height: 1.75; color: #4a4a5a;
+  margin-bottom: 14px; max-width: 700px;
+}
+.project-links { display: flex; gap: 8px; flex-wrap: wrap; }
+.project-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px 12px; border: 1px solid var(--border); border-radius: 5px;
+  text-decoration: none; font-size: 0.72rem; font-weight: 500;
+  color: var(--muted); transition: all 0.3s;
+  font-family: 'JetBrains Mono', monospace;
+}
+.project-link:hover { border-color: var(--accent); color: var(--accent); }
+.project-link svg { width: 11px; height: 11px; }
+
+/* ---- Experience Timeline ---- */
+.timeline { position: relative; padding-left: 30px; }
+.timeline::before {
+  content: ''; position: absolute; left: 6px; top: 8px;
+  width: 1.5px; height: calc(100% - 16px);
+  background: linear-gradient(to bottom, var(--accent-light), var(--border));
+}
+.timeline-item { position: relative; padding-bottom: 30px; }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-dot {
+  position: absolute; left: -27px; top: 6px;
+  width: 10px; height: 10px;
+  background: var(--paper); border: 2px solid var(--accent);
+  border-radius: 50%; z-index: 1;
+}
+.timeline-item:first-child .timeline-dot {
+  background: var(--accent); box-shadow: 0 0 0 4px rgba(124,77,40,0.1);
+}
+.timeline-role { font-weight: 600; font-size: 0.92rem; margin-bottom: 2px; }
+.timeline-org {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem; font-weight: 600; color: var(--accent); margin-bottom: 2px;
+}
+.timeline-date { font-size: 0.76rem; color: var(--muted); letter-spacing: 0.04em; }
+
+/* ---- Education ---- */
+.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.edu-card {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
+  padding: 24px; transition: all 0.3s;
+}
+.edu-card:hover { border-color: var(--accent-light); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.04); }
+.edu-degree { font-weight: 600; font-size: 0.92rem; margin-bottom: 4px; }
+.edu-school {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem; font-weight: 600; color: var(--accent); margin-bottom: 4px;
+}
+.edu-detail { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+
+/* ---- Service ---- */
+.service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.service-card {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
+  padding: 20px 22px; transition: all 0.3s;
+}
+.service-card:hover { border-color: var(--accent-light); transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.04); }
+.service-type {
+  font-size: 0.66rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 5px;
+}
+.service-detail { font-size: 0.86rem; line-height: 1.5; }
+
+/* ---- Footer ---- */
+footer {
+  max-width: 1120px; margin: 0 auto; padding: 36px 40px 56px;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.78rem; color: var(--muted);
+}
+footer a { color: var(--accent); text-decoration: none; }
+
+/* ---- Animations ---- */
+.fade-in {
+  opacity: 0; transform: translateY(18px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* ---- Mobile ---- */
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; gap: 28px; padding: 105px 22px 44px; }
+  .hero-photo-wrap { max-width: 180px; margin: 0 auto; }
+  .hero-name { font-size: 2rem; }
+  .hero-content { text-align: center; }
+  .hero-bio { margin: 0 auto 20px; }
+  .hero-links { justify-content: center; }
+  section { padding: 44px 22px; }
+  .interests-grid { grid-template-columns: 1fr 1fr; }
+  .edu-grid, .service-grid { grid-template-columns: 1fr; }
+  .nav-inner { padding: 0 18px; }
+  .nav-links { display: none; }
+  .mobile-toggle { display: block; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 58px; left: 0; right: 0;
+    background: rgba(250,248,245,0.97); backdrop-filter: blur(16px);
+    padding: 18px 22px; gap: 14px; border-bottom: 1px solid var(--border);
+  }
+  .news-item { grid-template-columns: 76px 1fr; gap: 10px; }
+  .project-inner { padding: 20px 18px; }
+  footer { flex-direction: column; gap: 6px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Y<span>.</span>He</a>
+    <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="https://royahe.github.io/files/2025_Roya_CV.pdf" target="_blank">CV ↗</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero / About -->
+<header class="hero" id="about">
+  <div class="hero-photo-wrap fade-in">
+    <img src="https://royahe.github.io/images/IMG_0693.jpg" alt="Yunjie (Roya) He" class="hero-photo">
+  </div>
+  <div class="hero-content fade-in">
+    <div class="hero-label">Ph.D. Candidate · IMPRS-IS Scholar</div>
+    <h1 class="hero-name">Yunjie (Roya) He</h1>
+    <p class="hero-subtitle">Knowledge Representation, Graph Reasoning &amp; Neural-Symbolic AI</p>
+    <p class="hero-bio">
+      I'm a PhD student at the <a href="https://www.ipvs.uni-stuttgart.de/departments/ac/" target="_blank">Analytical Computing</a> department of the University of Stuttgart and <a href="https://www.bosch-ai.com" target="_blank">Bosch Center for Artificial Intelligence</a>, supervised by <a href="https://scholar.google.com/citations?user=QvpcUn8AAAAJ" target="_blank">Prof. Steffen Staab</a> and Prof. Evgeny Kharlamov. I'm also an <a href="https://imprs.is.mpg.de" target="_blank">IMPRS-IS</a> scholar at the Max Planck Institute. My research focuses on bridging the gap between neural and symbolic reasoning over knowledge graphs — developing methods that are both expressive and explainable for complex query answering, ontology learning, and multi-modal knowledge integration.
+    </p>
+    <div class="hero-links">
+      <a href="mailto:yunjie.he@ipvs.uni-stuttgart.de" class="hero-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Email
+      </a>
+      <a href="https://scholar.google.com/citations?hl=en&user=7u9-I40AAAAJ" target="_blank" class="hero-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+        Scholar
+      </a>
+      <a href="https://github.com/RoyaHe" target="_blank" class="hero-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/yunjie-he-20618216b" target="_blank" class="hero-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Research Interests -->
+<section id="interests">
+  <div class="section-header fade-in">
+    <span class="section-num">1</span>
+    <h2 class="section-title">Research Interests</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="interests-grid">
+    <div class="interest-card fade-in"><span class="interest-icon">🔍</span><h4>Complex Query Answering over Knowledge Graphs</h4></div>
+    <div class="interest-card fade-in"><span class="interest-icon">🧠</span><h4>Knowledge Representation &amp; Reasoning</h4></div>
+    <div class="interest-card fade-in"><span class="interest-icon">🌐</span><h4>Multi-modal Knowledge Graphs</h4></div>
+    <div class="interest-card fade-in"><span class="interest-icon">📊</span><h4>Graph Neural Networks &amp; Geometric Embeddings</h4></div>
+  </div>
+</section>
+
+<!-- News -->
+<section id="news">
+  <div class="section-header fade-in">
+    <span class="section-num">2</span>
+    <h2 class="section-title">News</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="news-list">
+    <div class="news-item fade-in">
+      <div class="news-date">Jan 2025</div>
+      <div class="news-text">Two papers accepted! <a href="https://arxiv.org/abs/2410.22105">DAGE</a> at <strong>The Web Conference 2025</strong> and <a href="https://arxiv.org/abs/2408.08248">Conformalized Answer Set Prediction</a> at <strong>NAACL 2025</strong>.</div>
+    </div>
+    <div class="news-item fade-in">
+      <div class="news-date">Oct 2024</div>
+      <div class="news-text">Presented our work on AConE at <strong>ECAI 2024</strong> in Santiago de Compostela, Spain.</div>
+    </div>
+    <div class="news-item fade-in">
+      <div class="news-date">Sep 2024</div>
+      <div class="news-text"><a href="https://arxiv.org/abs/2408.08226">Predictive Multiplicity of KGE in Link Prediction</a> accepted at <strong>EMNLP 2024</strong> Findings.</div>
+    </div>
+    <div class="news-item fade-in">
+      <div class="news-date">Jul 2024</div>
+      <div class="news-text"><a href="https://arxiv.org/abs/2407.09212">Generating SROI⁻ Ontologies via KG Query Embedding</a> accepted at <strong>ECAI 2024</strong> as an Oral Talk.</div>
+    </div>
+    <div class="news-item fade-in">
+      <div class="news-date">Dec 2023</div>
+      <div class="news-text"><a href="https://arxiv.org/abs/2312.14877">Robust Knowledge Extraction from LLMs using Social Choice Theory</a> accepted at <strong>AAMAS 2024</strong>.</div>
+    </div>
+    <div class="news-item fade-in">
+      <div class="news-date">Aug 2023</div>
+      <div class="news-text"><a href="https://ceur-ws.org/Vol-3632/ISWC2023_paper_463.pdf">Can Pattern Learning Enhance Complex Logical Query Answering?</a> accepted at <strong>ISWC 2023</strong> Poster &amp; Demo.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects / Publications -->
+<section id="projects">
+  <div class="section-header fade-in">
+    <span class="section-num">3</span>
+    <h2 class="section-title">Projects &amp; Publications</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="projects-list">
+
+    <!-- HybridQE -->
+    <div class="project-card fade-in">
+      <div class="project-inner">
+        <div class="project-top">
+          <span class="project-status ongoing">Ongoing Work</span>
+          <span class="project-venue">Under Review</span>
+        </div>
+        <h3 class="project-title">HybridQE: Hybrid Query Answering over Incomplete Text-Labeled Graphs</h3>
+        <p class="project-authors"><strong>Yunjie He</strong>, et al.</p>
+        <p class="project-desc">
+          Introduces the task of hybrid query answering (HybridQA) over incomplete text-labeled graph databases, which requires joint reasoning over both symbolic logical constraints and free-form textual descriptions under information incompleteness. Proposes HybridQE, a hybrid query embedding framework that aligns symbolic and textual constraints in a unified embedding space via query-conditioned entity similarity, and constructs two new benchmarks from e-commerce and biological domains.
+        </p>
+        <div class="project-links">
+          <a href="#" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            paper (coming soon)
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAGE -->
+    <div class="project-card fade-in">
+      <div class="project-inner">
+        <div class="project-top">
+          <span class="project-status published">Published</span>
+          <span class="project-venue">The Web Conference 2025</span>
+        </div>
+        <h3 class="project-title"><a href="https://arxiv.org/abs/2410.22105">DAGE: DAG Query Answering via Relational Combinator with Logical Constraints</a></h3>
+        <p class="project-authors"><strong>Yunjie He</strong>, Bo Xiong, Daniel Hernández, Yuqicheng Zhu, Evgeny Kharlamov, Steffen Staab</p>
+        <p class="project-desc">
+          Defines DAG queries, a more general class of queries formulated in the ALCOIR description logic that extends tree-form queries by allowing quantified variables to appear multiple times. Proposes DAGE, a plug-and-play relational combinator module that extends existing tree-form query embedding methods (Query2Box, BetaE, ConE) to handle DAG queries, with proper regularization terms encouraging tautologies including monotonicity and restricted conjunction preserving. Introduces six novel DAG query types and new benchmark datasets.
+        </p>
+        <div class="project-links">
+          <a href="https://arxiv.org/abs/2410.22105" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            arxiv
+          </a>
+          <a href="https://github.com/RoyaHe/DAG_RC" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            code
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conformalized -->
+    <div class="project-card fade-in">
+      <div class="project-inner">
+        <div class="project-top">
+          <span class="project-status published">Published</span>
+          <span class="project-venue">NAACL 2025</span>
+        </div>
+        <h3 class="project-title"><a href="https://arxiv.org/abs/2408.08248">Conformalized Answer Set Prediction for Knowledge Graph Embedding</a></h3>
+        <p class="project-authors"><strong>Yunjie He</strong>, et al.</p>
+        <p class="project-desc">
+          Applies conformal prediction to knowledge graph embeddings for link prediction, providing statistically guaranteed prediction sets with controlled coverage.
+        </p>
+        <div class="project-links">
+          <a href="https://arxiv.org/abs/2408.08248" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            arxiv
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- AConE -->
+    <div class="project-card fade-in">
+      <div class="project-inner">
+        <div class="project-top">
+          <span class="project-status oral">Oral Talk</span>
+          <span class="project-venue">ECAI 2024</span>
+        </div>
+        <h3 class="project-title"><a href="https://arxiv.org/abs/2407.09212">Generating SROI⁻ Ontologies via Knowledge Graph Query Embedding Learning</a></h3>
+        <p class="project-authors"><strong>Yunjie He</strong>, Daniel Hernández, Mojtaba Nayyeri, Bo Xiong, Yuqicheng Zhu, Evgeny Kharlamov, Steffen Staab</p>
+        <p class="project-desc">
+          Proposes AConE, a novel query embedding method that explains knowledge learned from knowledge graphs in the form of SROI⁻ description logic axioms. Embeds each SROI⁻ concept as a cone in complex vector space and relations as rotations and scalings, establishing a one-to-one mapping between logical and geometrical operators. Achieves superior results with fewer parameters, particularly on WN18RR where accuracy improves 18.35% over baselines.
+        </p>
+        <div class="project-links">
+          <a href="https://arxiv.org/abs/2407.09212" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            arxiv
+          </a>
+          <a href="https://github.com/RoyaHe/AConE" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            code
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Predictive Multiplicity -->
+    <div class="project-card fade-in">
+      <div class="project-inner">
+        <div class="project-top">
+          <span class="project-status published">Published</span>
+          <span class="project-venue">EMNLP 2024 Findings</span>
+        </div>
+        <h3 class="project-title"><a href="https://arxiv.org/abs/2408.08226">Predictive Multiplicity of Knowledge Graph Embeddings in Link Prediction</a></h3>
+        <p class="project-authors"><strong>Yunjie He</strong>, et al.</p>
+        <p class="project-desc">
+          Investigates predictive multiplicity in knowledge graph embeddings for link prediction, analyzing how multiple well-performing models can yield conflicting predictions.
+        </p>
+        <div class="project-links">
+          <a href="https://arxiv.org/abs/2408.08226" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            arxiv
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- AAMAS -->
+    <div class="project-card fade-in">
+      <div class="project-inner">
+        <div class="project-top">
+          <span class="project-status published">Published</span>
+          <span class="project-venue">AAMAS 2024</span>
+        </div>
+        <h3 class="project-title"><a href="https://arxiv.org/abs/2312.14877">Robust Knowledge Extraction from Large Language Models using Social Choice Theory</a></h3>
+        <p class="project-authors"><strong>Yunjie He</strong>, et al.</p>
+        <p class="project-desc">
+          Bridges social choice theory with LLM knowledge extraction, applying voting mechanisms to aggregate and robustify factual knowledge extracted from large language models.
+        </p>
+        <div class="project-links">
+          <a href="https://arxiv.org/abs/2312.14877" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            arxiv
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Survey -->
+    <div class="project-card fade-in">
+      <div class="project-inner">
+        <div class="project-top">
+          <span class="project-status published">Preprint</span>
+          <span class="project-venue">ArXiv Survey</span>
+        </div>
+        <h3 class="project-title"><a href="https://arxiv.org/abs/2304.11949">Geometric Relational Embeddings: A Survey</a></h3>
+        <p class="project-authors">Bo Xiong, Mojtaba Nayyeri, Ming Jin, <strong>Yunjie He</strong>, Michael Cochez, Shirui Pan, Steffen Staab</p>
+        <p class="project-desc">
+          A comprehensive survey covering geometric approaches to relational embeddings, reviewing methods based on points, boxes, cones, distributions, and other geometric objects for knowledge graph representation learning.
+        </p>
+        <div class="project-links">
+          <a href="https://arxiv.org/abs/2304.11949" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            arxiv
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ISWC 2023 -->
+    <div class="project-card fade-in">
+      <div class="project-inner">
+        <div class="project-top">
+          <span class="project-status published">Published</span>
+          <span class="project-venue">ISWC 2023 · Poster &amp; Demo</span>
+        </div>
+        <h3 class="project-title"><a href="https://ceur-ws.org/Vol-3632/ISWC2023_paper_463.pdf">Can Pattern Learning Enhance Complex Logical Query Answering?</a></h3>
+        <p class="project-authors"><strong>Yunjie He</strong>, Mojtaba Nayyeri, Bo Xiong, Yuqicheng Zhu, Evgeny Kharlamov, Steffen Staab</p>
+        <p class="project-desc">
+          An early investigation into how learning logical patterns (symmetry, inversion, composition, etc.) can improve complex query answering — a foundational study leading to the AConE method.
+        </p>
+        <div class="project-links">
+          <a href="https://ceur-ws.org/Vol-3632/ISWC2023_paper_463.pdf" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            pdf
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience">
+  <div class="section-header fade-in">
+    <span class="section-num">4</span>
+    <h2 class="section-title">Experience</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="timeline fade-in">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-role">Ph.D. Candidate</div>
+      <div class="timeline-org">University of Stuttgart &amp; Bosch Center for AI</div>
+      <div class="timeline-date">Jun 2022 — Present</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-role">Research Assistant</div>
+      <div class="timeline-org">City University of Hong Kong</div>
+      <div class="timeline-date">Nov 2021 — Apr 2022</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-role">Research Intern</div>
+      <div class="timeline-org">HUAWEI Noah's Ark Lab</div>
+      <div class="timeline-date">Jun 2021 — Sep 2021</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-role">Data Analyst Intern</div>
+      <div class="timeline-org">HUATAI Technology</div>
+      <div class="timeline-date">Jun 2020 — Aug 2020</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-role">Research Assistant</div>
+      <div class="timeline-org">The Alan Turing Institute</div>
+      <div class="timeline-date">Jun 2019 — Sep 2019</div>
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education">
+  <div class="section-header fade-in">
+    <span class="section-num">5</span>
+    <h2 class="section-title">Education</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card fade-in">
+      <div class="edu-degree">MSc Computational Statistics &amp; Machine Learning</div>
+      <div class="edu-school">University College London (UCL)</div>
+      <div class="edu-detail">Outstanding academic performance award</div>
+    </div>
+    <div class="edu-card fade-in">
+      <div class="edu-degree">BSc (Hons) Economics &amp; Statistics</div>
+      <div class="edu-school">University College London (UCL)</div>
+      <div class="edu-detail">Honoured degree</div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaching & Service -->
+<section id="service">
+  <div class="section-header fade-in">
+    <span class="section-num">6</span>
+    <h2 class="section-title">Teaching &amp; Service</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="service-grid">
+    <div class="service-card fade-in">
+      <div class="service-type">Teaching</div>
+      <div class="service-detail">Deep Learning Lab 2022/23 — University of Stuttgart</div>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-type">Reviewer</div>
+      <div class="service-detail">ISWC 2025, WWW 2025, COLING 2025, ACL 2023</div>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-type">Summer School</div>
+      <div class="service-detail">Oxford Machine Learning Summer School 2023</div>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-type">Scholarship</div>
+      <div class="service-detail">IMPRS-IS Scholar — Max Planck Institute</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <span>&copy; 2025 Yunjie (Roya) He · Stuttgart, Germany</span>
+  <span>
+    <a href="mailto:yunjie.he@ki.uni-stuttgart.de">yunjie.he@ki.uni-stuttgart.de</a>
+  </span>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 70);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 16);
+});
+
+document.querySelectorAll('.nav-links a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { t.scrollIntoView({ behavior: 'smooth', block: 'start' }); document.querySelector('.nav-links').classList.remove('open'); }
+  });
+});
+</script>
+</body>
+</html>
