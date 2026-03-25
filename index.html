@@ -986,6 +986,20 @@ document.querySelectorAll('.nav-links a[href^="#"]').forEach(a => {
     if (t) { t.scrollIntoView({ behavior: 'smooth', block: 'start' }); document.querySelector('.nav-links').classList.remove('open'); }
   });
 });
+
+// Lightbox for photo gallery
+function openLightbox(el) {
+  const img = el.querySelector('img');
+  if (!img) return; // skip placeholders
+  document.getElementById('lightbox-img').src = img.src;
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 </script>
 </body>
 </html>
