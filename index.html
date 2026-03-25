@@ -31,7 +31,7 @@ body {
   color: var(--ink);
   line-height: 1.7;
   font-size: 15px;
-  zoom: 1.5;
+  /*zoom: 1.5;*/
   overflow-x: hidden;
 }
 
@@ -404,8 +404,14 @@ footer a { color: var(--accent); text-decoration: none; }
 }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+/* ---- Desktop zoom ---- */
+@media (min-width: 769px) {
+  body { zoom: 1.15; }
+}
+  
 /* ---- Mobile ---- */
 @media (max-width: 768px) {
+  body { zoom: 1; }
   .hero { grid-template-columns: 1fr; gap: 28px; padding: 105px 22px 44px; }
   .hero-photo-wrap { max-width: 180px; margin: 0 auto; }
   .hero-name { font-size: 2rem; }
