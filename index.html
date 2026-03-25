@@ -421,27 +421,6 @@ footer a { color: var(--accent); text-decoration: none; }
   </div>
   <div class="projects-list">
 
-    <!-- RELAX -->
-    <div class="project-card fade-in">
-      <div class="project-inner">
-        <div class="project-top">
-          <span class="project-status published">Published</span>
-          <span class="project-venue">TMLR</span>
-        </div>
-        <h3 class="project-title">Counting Still Counts: Understanding Neural Complex Query Answering Through Query Relaxation</h3>
-        <p class="project-authors">Yannick Brunink, Daniel Daza, <strong>Yunjie He</strong>, Michael Cochez</p>
-        <p class="project-desc">
-          Neural methods for Complex Query Answering (CQA) over knowledge graphs (KGs) are widely believed to learn patterns that generalize beyond explicit graph structure, allowing them to infer answers that are unreachable through symbolic query processing. In this work, we critically examine this assumption through a systematic analysis comparing neural CQA models with an alternative, training-free query relaxation strategy that retrieves possible answers by relaxing query constraints and counting resulting paths. Across multiple datasets and query structures, we find several cases where neural and relaxation-based approaches perform similarly, with no neural model consistently outperforming the latter. Moreover, a similarity analysis reveals that their retrieved answers exhibit little overlap, and that combining their outputs consistently improves performance. These results call for a re-evaluation of progress in neural query answering: despite their complexity, current models fail to subsume the reasoning patterns captured by query relaxation. Our findings highlight the importance of stronger non-neural baselines and suggest that future neural approaches could benefit from incorporating principles of query relaxation.
-        </p>
-        <div class="project-links">
-          <a href="https://arxiv.org/abs/2511.22565" target="_blank" class="project-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            arxiv
-          </a>
-        </div>
-      </div>
-    </div>
-
     <!-- HybridQE -->
     <div class="project-card fade-in">
       <div class="project-inner">
@@ -458,6 +437,27 @@ footer a { color: var(--accent); text-decoration: none; }
           <a href="#" class="project-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
             paper (coming soon)
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RELAX -->
+    <div class="project-card fade-in">
+      <div class="project-inner">
+        <div class="project-top">
+          <span class="project-status published">Published</span>
+          <span class="project-venue">TMLR</span>
+        </div>
+        <h3 class="project-title">Counting Still Counts: Understanding Neural Complex Query Answering Through Query Relaxation</h3>
+        <p class="project-authors">Yannick Brunink, Daniel Daza, <strong>Yunjie He</strong>, Michael Cochez</p>
+        <p class="project-desc">
+          Neural methods for Complex Query Answering (CQA) over knowledge graphs (KGs) are widely believed to learn patterns that generalize beyond explicit graph structure, allowing them to infer answers that are unreachable through symbolic query processing. In this work, we critically examine this assumption through a systematic analysis comparing neural CQA models with an alternative, training-free query relaxation strategy that retrieves possible answers by relaxing query constraints and counting resulting paths.
+        </p>
+        <div class="project-links">
+          <a href="https://arxiv.org/abs/2511.22565" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            arxiv
           </a>
         </div>
       </div>
