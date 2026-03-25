@@ -421,6 +421,27 @@ footer a { color: var(--accent); text-decoration: none; }
   </div>
   <div class="projects-list">
 
+    <!-- RELAX -->
+    <div class="project-card fade-in">
+      <div class="project-inner">
+        <div class="project-top">
+          <span class="project-status published">Published</span>
+          <span class="project-venue">TMLR</span>
+        </div>
+        <h3 class="project-title">Counting Still Counts: Understanding Neural Complex Query Answering Through Query Relaxation</h3>
+        <p class="project-authors">Yannick Brunink, Daniel Daza, <strong>Yunjie He</strong>, Michael Cochez</p>
+        <p class="project-desc">
+          Neural methods for Complex Query Answering (CQA) over knowledge graphs (KGs) are widely believed to learn patterns that generalize beyond explicit graph structure, allowing them to infer answers that are unreachable through symbolic query processing. In this work, we critically examine this assumption through a systematic analysis comparing neural CQA models with an alternative, training-free query relaxation strategy that retrieves possible answers by relaxing query constraints and counting resulting paths. Across multiple datasets and query structures, we find several cases where neural and relaxation-based approaches perform similarly, with no neural model consistently outperforming the latter. Moreover, a similarity analysis reveals that their retrieved answers exhibit little overlap, and that combining their outputs consistently improves performance. These results call for a re-evaluation of progress in neural query answering: despite their complexity, current models fail to subsume the reasoning patterns captured by query relaxation. Our findings highlight the importance of stronger non-neural baselines and suggest that future neural approaches could benefit from incorporating principles of query relaxation.
+        </p>
+        <div class="project-links">
+          <a href="https://arxiv.org/abs/2511.22565" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            arxiv
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!-- HybridQE -->
     <div class="project-card fade-in">
       <div class="project-inner">
@@ -429,7 +450,7 @@ footer a { color: var(--accent); text-decoration: none; }
           <span class="project-venue">Under Review</span>
         </div>
         <h3 class="project-title">HybridQE: Hybrid Query Answering over Incomplete Text-Labeled Graphs</h3>
-        <p class="project-authors"><strong>Yunjie He</strong>, et al.</p>
+        <p class="project-authors"><strong>Yunjie He</strong>, Bo Xiong, Daniel Hernández, Yuqicheng Zhu, Yi Wang, Evgeny Kharlamov, Steffen Staab</p>
         <p class="project-desc">
           Introduces the task of hybrid query answering (HybridQA) over incomplete text-labeled graph databases, which requires joint reasoning over both symbolic logical constraints and free-form textual descriptions under information incompleteness. Proposes HybridQE, a hybrid query embedding framework that aligns symbolic and textual constraints in a unified embedding space via query-conditioned entity similarity, and constructs two new benchmarks from e-commerce and biological domains.
         </p>
@@ -475,7 +496,7 @@ footer a { color: var(--accent); text-decoration: none; }
           <span class="project-venue">NAACL 2025</span>
         </div>
         <h3 class="project-title"><a href="https://arxiv.org/abs/2408.08248">Conformalized Answer Set Prediction for Knowledge Graph Embedding</a></h3>
-        <p class="project-authors"><strong>Yunjie He</strong>, et al.</p>
+        <p class="project-authors">Yuqicheng Zhu, Nico Potyka, Jiarong Pan, Bo Xiong, <strong>Yunjie He</strong>, Evgeny Kharlamov, Steffen Staab</p>
         <p class="project-desc">
           Applies conformal prediction to knowledge graph embeddings for link prediction, providing statistically guaranteed prediction sets with controlled coverage.
         </p>
@@ -521,7 +542,7 @@ footer a { color: var(--accent); text-decoration: none; }
           <span class="project-venue">EMNLP 2024 Findings</span>
         </div>
         <h3 class="project-title"><a href="https://arxiv.org/abs/2408.08226">Predictive Multiplicity of Knowledge Graph Embeddings in Link Prediction</a></h3>
-        <p class="project-authors"><strong>Yunjie He</strong>, et al.</p>
+        <p class="project-authors">Yuqicheng Zhu, Nico Potyka, Mojtaba Nayyeri, Bo Xiong, <strong>Yunjie He</strong>, Evgeny Kharlamov, Steffen Staab</p>
         <p class="project-desc">
           Investigates predictive multiplicity in knowledge graph embeddings for link prediction, analyzing how multiple well-performing models can yield conflicting predictions.
         </p>
@@ -542,7 +563,7 @@ footer a { color: var(--accent); text-decoration: none; }
           <span class="project-venue">AAMAS 2024</span>
         </div>
         <h3 class="project-title"><a href="https://arxiv.org/abs/2312.14877">Robust Knowledge Extraction from Large Language Models using Social Choice Theory</a></h3>
-        <p class="project-authors"><strong>Yunjie He</strong>, et al.</p>
+        <p class="project-authors">Nico Potyka, Yuqicheng Zhu, <strong>Yunjie He</strong>, Evgeny Kharlamov, Steffen Staab</p>
         <p class="project-desc">
           Bridges social choice theory with LLM knowledge extraction, applying voting mechanisms to aggregate and robustify factual knowledge extracted from large language models.
         </p>
